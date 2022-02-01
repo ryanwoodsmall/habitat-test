@@ -14,8 +14,9 @@ for p in plan.{sh,ps1}.tmpl ; do
     cat "${p}" > "${f}"
     for e in origin name version release ; do
       r="${e^^}"
-      echo "replacing ${r} with ${!e} in ${f}"
+      echo "- replacing ${r} with ${!e} in ${f}"
       sed -i "s,%%${r}%%,${!e},g" "${f}"
     done
+    echo
   fi
 done

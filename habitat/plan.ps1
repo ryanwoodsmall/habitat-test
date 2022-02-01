@@ -1,7 +1,7 @@
 $pkg_name="test"
 $pkg_origin="ryanwoodsmall_private"
 $pkg_version="0.0.1"
-$pkg_release="20220201170126"
+$pkg_release="20220201192741"
 $pkg_maintainer="ryanwoodsmall <rwoodsmall@gmail.com>"
 
 function Invoke-Unpack {
