@@ -1,0 +1,21 @@
+pkg_origin="%%ORIGIN%%"
+pkg_name="%%NAME%%"
+pkg_version="%%VERSION%%"
+pkg_release="%%RELEASE%%"
+pkg_maintainer="ryanwoodsmall <rwoodsmall@gmail.com>"
+
+for f in do_{download,verify,unpack,prepare,build} ; do
+  eval "
+  function ${f}(){
+    true
+  }
+  "
+done
+unset f
+
+function do_install(){
+  mkdir -p "${pkg_prefix}"
+  install -m 0644 payload "${pkg_prefix}/payload"
+}
+
+# vim: ft=sh:
